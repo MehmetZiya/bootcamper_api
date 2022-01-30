@@ -1,0 +1,19 @@
+{
+  "name": "bootcamper_api",
+  "version": "1.0.0",
+  "description": "Bootcamper api backend project",
+  "main": "srv.js",
+  "scripts": {
+    "start": "NODE_ENV=production node server",
+    "dev": "nodemon server.js"
+  },
+  "author": "Mehmet Ziya Yazgan",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^14.3.2",
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
