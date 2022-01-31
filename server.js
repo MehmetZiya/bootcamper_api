@@ -8,7 +8,7 @@ const connectDB = require('./config/db')
 // const logger = require('./middleware/logger')
 
 //Route Files
-const bootcamps = require('./routes/bootcamps')
+const bootcamps = require('./routes/bootcampRoutes')
 
 dotenv.config({ path: './config/config.env' })
 
@@ -16,6 +16,9 @@ dotenv.config({ path: './config/config.env' })
 connectDB()
 
 const app = express()
+
+//Body parser
+app.use(express.json())
 
 //Middlewares
 // app.use(logger) custom logger middleware
