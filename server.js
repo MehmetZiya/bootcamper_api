@@ -10,6 +10,7 @@ const connectDB = require('./config/db')
 
 //Route Files
 const bootcamps = require('./routes/bootcampRoutes')
+const courses = require('./routes/courseRoutes')
 
 dotenv.config({ path: './config/config.env' })
 
@@ -29,11 +30,9 @@ if (process.env.NODE_ENV === 'DEVELOPMENT') {
 
 //Routes
 app.use('/api/v1/bootcamps', bootcamps)
+app.use('/api/v1/courses', courses)
 
 app.use(errorHandler)
-app.get('/', (req, res) => {
-  res.send('Hello from express')
-})
 
 const PORT = process.env.PORT || 5000
 
