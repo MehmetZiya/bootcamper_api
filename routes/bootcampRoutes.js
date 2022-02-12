@@ -9,13 +9,13 @@ const {
   photoUpload,
 } = require('../controllers/bootcampControllers')
 const Bootcamp = require('../models/BootcampModel')
-const advancedResults = require('../middleware/advancedResults')
 
 //Include other resource router
 const courseRouter = require('./courseRoutes')
 
 const router = express.Router()
 
+const advancedResults = require('../middleware/advancedResults')
 const { protect, authorize } = require('../middleware/auth')
 
 router.use('/:bootcampId/courses', courseRouter)
