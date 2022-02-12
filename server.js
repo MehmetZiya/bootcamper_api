@@ -15,6 +15,7 @@ const connectDB = require('./config/db')
 const bootcamps = require('./routes/bootcampRoutes')
 const courses = require('./routes/courseRoutes')
 const auth = require('./routes/authRoutes')
+const users = require('./routes/userRoutes')
 
 dotenv.config({ path: './config/config.env' })
 
@@ -41,6 +42,7 @@ app.use(express.static(path.join(__dirname, 'puplic')))
 app.use('/api/v1/bootcamps', bootcamps)
 app.use('/api/v1/courses', courses)
 app.use('/api/v1/auth', auth)
+app.use('/api/v1/users', users)
 
 app.use(errorHandler)
 
