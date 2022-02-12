@@ -12,6 +12,7 @@ const Bootcamp = require('../models/BootcampModel')
 
 //Include other resource router
 const courseRouter = require('./courseRoutes')
+const reviewRouter = require('./reviewRoutes')
 
 const router = express.Router()
 
@@ -19,7 +20,7 @@ const advancedResults = require('../middleware/advancedResults')
 const { protect, authorize } = require('../middleware/auth')
 
 router.use('/:bootcampId/courses', courseRouter)
-
+router.use('/:bootcampId/reviews', reviewRouter)
 router
   .route('/')
   .get(advancedResults(Bootcamp, 'courses'), getBootcamps)
