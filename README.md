@@ -36,7 +36,7 @@ node seeder -i
 
 ## Demo
 
-The API is live at [bootcamper-api.io](https://bootcamper-api.io)
+The API is live at [bootcamper-api.live](https://bootcamper-api.live)
 
 Extensive documentation with examples [here](https://documenter.getpostman.com/view/14725572/UVeNkh9R)
 
